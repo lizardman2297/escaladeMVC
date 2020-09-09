@@ -15,8 +15,11 @@
             header('location: index.php');
         }
     }
-
-
+    
+    function userLogout() {
+        session_destroy();
+        header('location: index.php');
+    }
 
     function login()
     {

@@ -48,7 +48,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Parametre</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Deconnexion</a>
+                        <a class="dropdown-item" href="index.php?action=userLogout">Deconnexion</a>
                     </div>
                 </li>
             </ul>
