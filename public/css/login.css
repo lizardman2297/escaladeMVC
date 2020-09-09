@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: lightgray;
-};
+}
 
 .formulaire {
     width: 300px;
@@ -13,4 +13,4 @@ body {
     transform: translate(-50%, -50%);
     background: gray;
     text-align: center;
-};
+}
