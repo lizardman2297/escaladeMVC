@@ -12,3 +12,5 @@ CREATE TABLE user (
     CONSTRAINT UK_username UNIQUE KEY (username),
     CONSTRAINT PK_idUser PRIMARY KEY (id)
 )ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+INSERT INTO user (username, password) VALUES ('loris', '$2y$10$m3Oh38TU4eyVSJlpyhX09e18ME86iK4dpvMj5uc2In/kgHMB9YrYW');
