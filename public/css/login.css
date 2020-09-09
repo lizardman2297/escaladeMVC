@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: lightgray;
+    background: #90A4AE;
 }
 
 .formulaire {
@@ -11,6 +11,53 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: gray;
+    background: #37474F;
+    border-radius: 10px;
     text-align: center;
+}
+
+.formulaire h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.formulaire input[type = "text"], .formulaire input[type = "password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(0, 119, 255);
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.2s;
+}
+
+.formulaire input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid green;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 144px;
+    transition: 0.2s;
+}
+
+.formulaire input[type = "text"]:focus, .formulaire input[type = "password"]:focus {
+    width: 280px;
+    border-color: green;
+}
+
+.formulaire input[type = "submit"]:hover {
+    width: 280px;
+    background-color: green;
 }

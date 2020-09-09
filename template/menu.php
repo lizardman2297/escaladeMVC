@@ -46,11 +46,9 @@
                         Utilisateur
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Liste sortie</a>
-                        <a class="dropdown-item" href="#">Prochaine sortie</a>
+                        <a class="dropdown-item" href="#">Parametre</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Liste lieux</a>
-                        <a class="dropdown-item" href="#">Ajouter lieux</a>
+                        <a class="dropdown-item" href="#">Deconnexion</a>
                     </div>
                 </li>
             </ul>

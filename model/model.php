@@ -9,11 +9,11 @@ function dbConnect()
 {
     try
     {
-        return PDO('mysql:host=localhost;dbname=escaladeMVC;charset=utf8', 'root', '');
+        return new PDO('mysql:host=localhost;dbname=escaladeMVC;charset=utf8', 'root', '');
     }
     catch(Exception $e)
     {
-        die('Erreur : '.$e->getMessage());
+        return die('Erreur : '.$e->getMessage());
     }
 
 };

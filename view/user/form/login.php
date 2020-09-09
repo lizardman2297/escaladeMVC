@@ -8,9 +8,13 @@
 </head>
 <body>
 
-<div class='formulaire' >
-    <form action="#" method="post">
+<div>
+    <form action="?action=userLogin" method="post" class='formulaire'>
         <h1>Login</h1>
+
+        <input type="text" name="username" id="username" placeholder="username">
+        <input type="password" name="password" id="password" placeholder="password">
+        <input type="submit" value="Connexion">
     </form>
 </div>
 
