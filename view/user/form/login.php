@@ -9,7 +9,7 @@
 <body>
 
 <div>
-    <form action="?action=userLogin" method="post" class='formulaire'>
+    <form action="index.php?module=user&action=login" method="post" class='formulaire'>
         <h1>Login</h1>
 
         <input type="text" name="username" id="username" placeholder="username">
