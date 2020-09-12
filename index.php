@@ -28,6 +28,8 @@
                 if (isset($_GET["action"])) {
                     if ($_GET["action"] == "login") {
                         userLogin($_POST["username"]);
+                    } else if ($_GET["action"] == "signup") {
+                        signup();
                     }
                 }
             }

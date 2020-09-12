@@ -15,6 +15,15 @@
             header('location: index.php');
         }
     }
+
+    // function userSignup()
+    // {
+    //     if (userExist($username)) {
+    //         //TODO - verifier password + ajout base de donné + connetion auto
+    //     } else {
+    //         header('location: index.php');
+    //     }
+    // }
     
     function userLogout() {
         session_destroy();
@@ -26,4 +35,13 @@
         require_once("view/user/form/login.php");
     }
 
-    
+    function signup()
+    {
+        if (isset($_POST["username"])) {
+            require_once("model/signupModel.php");
+            $username = $_POST["username"];
+            userSignUp($username);
+        } else {
+            require_once("view/user/form/signUp.php");
+        }
+    }
