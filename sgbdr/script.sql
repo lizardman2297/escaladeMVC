@@ -39,6 +39,7 @@ CREATE TABLE materiel (
     dateAchat       DATE,
     marque          VARCHAR(50),
     quantite        INT UNSIGNED,
+    prix            FLOAT UNSIGNED,
     commentaire     LONGTEXT,
     image           VARCHAR(255),
     caracteristique LONGTEXT,
@@ -70,3 +71,6 @@ INSERT INTO typeMateriel (libelleType) VALUES ('Baudrier');
 INSERT INTO typeMateriel (libelleType) VALUES ('Autre');
 
 INSERT INTO materiel (nom, status, type) VALUES ("corde decath", 1, 1);
+INSERT INTO materiel (nom, status, type) VALUES ("deguaine decath", 1, 2);
+INSERT INTO materiel (nom, status, type) VALUES ("chausson decath loris", 1, 8);
+INSERT INTO materiel (nom, status, type) VALUES ("chausson decath Noemie", 1, 8);

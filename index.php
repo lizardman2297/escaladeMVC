@@ -62,6 +62,7 @@
             header('location: index.php?module=dashboard');
         }
     } else {
+        require_once("controller/userController.php");
         if (isset($_GET["module"])) {
             if ($_GET["module"] == "user") {
                 if (isset($_GET["action"])) {
