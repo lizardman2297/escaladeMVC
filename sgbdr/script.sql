@@ -69,3 +69,4 @@ INSERT INTO typeMateriel (libelleType) VALUES ('Chausson');
 INSERT INTO typeMateriel (libelleType) VALUES ('Baudrier');
 INSERT INTO typeMateriel (libelleType) VALUES ('Autre');
 
+INSERT INTO materiel (nom, status, type) VALUES ("corde decath", 1, 1);

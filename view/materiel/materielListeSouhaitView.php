@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        Liste materiel actuel
+        Liste de souhait
     </div>
 </body>
 </html>

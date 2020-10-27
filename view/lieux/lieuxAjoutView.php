@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        Liste materiel actuel
+        formualire ajout lieux
     </div>
 </body>
 </html>

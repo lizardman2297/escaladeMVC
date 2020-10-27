@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        Liste materiel actuel
+        Ajout sortie
     </div>
 </body>
 </html>

@@ -45,3 +45,7 @@
             require_once("view/user/form/signUp.php");
         }
     }
+
+    function userSetting(){
+        require_once("view/user/userSettingView.php");
+    }

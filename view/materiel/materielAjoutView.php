@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        Liste materiel actuel
+        Forumulaire ajout materiel
     </div>
 </body>
 </html>

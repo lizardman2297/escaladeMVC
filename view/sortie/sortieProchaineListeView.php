@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        Liste materiel actuel
+        Liste prochaine sorie
     </div>
 </body>
 </html>

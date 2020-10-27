@@ -9,7 +9,7 @@ function dbConnect()
 {
     try
     {
-        return new PDO('mysql:host=localhost;dbname=escaladeMVC;charset=utf8', 'root', '');
+        return new PDO('mysql:host=localhost;dbname=escaladeMVC;charset=utf8', 'loris', 'pass');
     }
     catch(Exception $e)
     {
@@ -18,12 +18,3 @@ function dbConnect()
 
 };
 
-/**
- * listMateriel
- *
- * @return string
- */
-function listMateriel()
-{
-    return "future liste de materiel";
-}

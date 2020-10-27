@@ -33,6 +33,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="index.php?module=sortie&action=liste">Liste sortie</a>
                         <a class="dropdown-item" href="index.php?module=sortie&action=prochaine">Prochaine sortie</a>
+                        <a class="dropdown-item" href="index.php?module=sortie&action=ajouter   ">Ajouter sortie sortie</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="index.php?module=lieux&action=liste">Liste lieux</a>
                         <a class="dropdown-item" href="index.php?module=lieux&action=ajouter">Ajouter lieux</a>
