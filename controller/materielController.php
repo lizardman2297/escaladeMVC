@@ -5,7 +5,6 @@ function listeMaterielActuel(){
     $title = "Liste materiel actuel";
     $type = getTypeMateriel();
 
-
     require_once("view/materiel/materielActuelView.php");
 }
 
