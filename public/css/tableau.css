@@ -1,7 +1,28 @@
+.table{
+    margin-bottom: 50px;
+}
+
 table, h2{
     text-align: center;
 }
 
 thead{
     background-color: #35A5FC;
+    box-shadow: 0px 0px 8px 1px navy;
+}
+
+.nom{
+    width: 550px;
+}
+
+.marque{
+    width: 150;
+}
+
+.date{
+    width: 150px;
+}
+
+.prix{
+    width: 90px;
 }

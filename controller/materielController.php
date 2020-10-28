@@ -15,7 +15,10 @@ function listeMaterielSouhait(){
 }
 
 function ajoutMateriel(){
+    require_once("model/materielModel.php");
+
     $title = "Ajouter materiel";
+    $type = getTypeMateriel();
 
     require_once("view/materiel/materielAjoutView.php");
 }
