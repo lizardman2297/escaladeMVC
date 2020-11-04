@@ -9,7 +9,7 @@
     <div class="container">
         Forumulaire ajout materiel
 
-        <form method="POST" action="#">
+        <form method="POST" action="model/formulaireMaterielAjoutModel.php">
             <div class="form-group">
                 <label for="nomProduit">Nom</label>
                 <input type="text" class="form-control" id="nomProduit">
