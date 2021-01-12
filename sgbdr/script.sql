@@ -49,8 +49,57 @@ CREATE TABLE materiel (
     CONSTRAINT FK_type FOREIGN KEY (type) REFERENCES typeMateriel(id)
 )ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
+CREATE TABLE region (
+    id TINYINT UNSIGNED AUTO_INCREMENT,
+    libelleRegion VARCHAR(255),
+    CONSTRAINT PK_idRegion PRIMARY KEY (id)
+)ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE departement (
+    id TINYINT UNSIGNED COMMENT "numero du departement",
+    libelleDepartement VARCHAR(255),
+    region TINYINT UNSIGNED NOT NULL,
+    CONSTRAINT PK_idDepartement PRIMARY KEY (id),
+    CONSTRAINT FK_region FOREIGN KEY (region) REFERENCES region(id)
+)ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE ville (
+    id TINYINT UNSIGNED AUTO_INCREMENT,
+    libelleVille VARCHAR(255),
+    departement TINYINT UNSIGNED NOT NULL,
+    CONSTRAINT PK_idVille PRIMARY KEY (id),
+    CONSTRAINT FK_departement FOREIGN KEY (departement) REFERENCES departement(id)
+)ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE lieux (
+    id TINYINT UNSIGNED AUTO_INCREMENT,
+    libelleLieu VARCHAR(255) NOT NULL,
+    ville TINYINT UNSIGNED NOT NULL,
+    coordoneesX DOUBLE,
+    coordoneesY DOUBLE,
+    CONSTRAINT PK_idLieu PRIMARY KEY (id),
+    CONSTRAINT FK_ville FOREIGN KEY (ville) REFERENCES ville(id)
+)ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE participant (
+    id TINYINT UNSIGNED AUTO_INCREMENT,
+    libelleParticipant VARCHAR(255) NOT NULL,
+    CONSTRAINT PK_idParticipant PRIMARY KEY (id)
+)ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE sortie (
+    id           TINYINT UNSIGNED AUTO_INCREMENT,
+    lieux        TINYINT UNSIGNED NOT NULL,
+    participant  TINYINT UNSIGNED NOT NULL,
+    dateSortie   DATE NOT NULL,
+    voie         LONGTEXT,
+    CONSTRAINT PK_idSortie PRIMARY KEY (id),
+    CONSTRAINT FK_lieu FOREIGN KEY (lieux) REFERENCES lieux(id),
+    CONSTRAINT FK_participant FOREIGN KEY (participant) REFERENCES participant(id)
+)ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
 -- ===============================================================================================================
---   Alimentation des tables                                
+--   Alimentation des tables (Materiel)                                
 -- ===============================================================================================================
 
 INSERT INTO statusMateriel (libelleStatus) VALUES ('Actuel');
@@ -82,3 +131,14 @@ INSERT INTO materiel (nom, marque, dateAchat, prix, commentaire, image, status, 
 INSERT INTO materiel (nom, marque, dateAchat, prix, commentaire, image, status, type) VALUES ("LONGE D'ESCALADE SIMPLE 75 CM", "Simond", "2019-12-15", 10, "Quantité : 2", "public/images/produit/longe75.webp", 1, 5);
 
 INSERT INTO materiel (nom, marque, dateAchat, prix, commentaire, status, type) VALUES ("ZE TOPO", "édition", "2019-12-15", 20, "", 1, 10);
+
+-- ===============================================================================================================
+--   Alimentation des tables (Sortie)                                
+-- ===============================================================================================================
+
+INSERT INTO region (libelleRegion) VALUES ("Auvergne-Rhône-Alpes");
+
+INSERT INTO departement (id, libelleDepartement, region) VALUES (38, "Isère", 1);
+
+INSERT INTO ville (libelleVille, departement) VALUES ("Grenoble", 38);
+INSERT INTO ville (libelleVille, departement) VALUES ("Saint Egreve", 38);

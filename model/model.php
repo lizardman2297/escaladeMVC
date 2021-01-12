@@ -9,7 +9,7 @@ function dbConnect()
 {
     try
     {
-        return new PDO('mysql:host=localhost;dbname=escaladeMVC;charset=utf8', 'loris', 'pass');
+        return new PDO('mysql:host=localhost;dbname=escaladeMVC;charset=utf8', 'root', '');
     }
     catch(Exception $e)
     {
