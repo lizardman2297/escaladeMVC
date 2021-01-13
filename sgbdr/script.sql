@@ -142,3 +142,6 @@ INSERT INTO departement (id, libelleDepartement, region) VALUES (38, "Isère", 1
 
 INSERT INTO ville (libelleVille, departement) VALUES ("Grenoble", 38);
 INSERT INTO ville (libelleVille, departement) VALUES ("Saint Egreve", 38);
+
+INSERT INTO lieux (libelleLieu, ville, coordoneesX, coordoneesY) VALUES ("Les brieux", 2, 45.23116985225736, 5.69424258771074);
+INSERT INTO lieux (libelleLieu, ville, coordoneesX, coordoneesY) VALUES ("Parc Guy Pape", 1, 45.19639209407917, 5.721704013246436);
