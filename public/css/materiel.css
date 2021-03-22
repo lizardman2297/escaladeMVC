@@ -32,3 +32,8 @@ h1:after {
     margin-right:-100%;
     margin-left:15px;
 }
+
+.materielVide {
+    text-align: center;
+    font-size: large;
+}

@@ -14,10 +14,16 @@
         liste materiel actuel
         <?php
             foreach ($type as $element) {
+
             ?>
                 <table class="table">
-                    <div class="titreMateriel"> <h1><?php echo $element ?></h1> </div>
+                    <div class="titreMateriel"> <h1><?php echo $element->getNom() ?></h1> </div>
 
+                    <?php
+                    if (getMateriel($element) == false) {
+                        echo "<p class='materielVide'>Vous n'avez pas ce type de materiel</p>";
+                    } else {
+                    ?>
                     <thead class="thead">
                         <tr>
                             <th scope="col" class="nom">Nom</th>
@@ -29,16 +35,20 @@
                     </thead>
                     <tbody>
                         <?php
+
                         foreach (getMateriel($element) as $materiel) {
-                        ?>
-                        <tr>
-                            <td class="nom"><a href="<?php echo $materiel->image ?>" data-lightbox="<?php echo $element ?>" data-title="<?php echo $materiel->nom ?>" ><?php echo $materiel->nom ?></a></td>
-                            <td class="marque"><?php echo $materiel->marque ?></td>
-                            <td class="date"><?php echo $materiel->dateAchat ?></td>
-                            <td class="prix"><?php echo $materiel->prix ?>€</td>
-                            <td><?php echo $materiel->commentaire ?></td>
-                        </tr>
+                            ?>
+
+                            <tr>
+                                <td class='nom'><a href='<?php echo $materiel->image ?>' data-lightbox='<?php echo $element ?>' data-title='<?php echo $materiel->nom ?>' ><?php echo $materiel->nom ?></a></td>
+
+                                <td class='marque'><?php echo $materiel->marque ?></td>
+                                <td class='date'><?php echo $materiel->dateAchat ?></td>
+                                <td class='prix'><?php echo $materiel->prix ?>€</td>
+                                <td><?php echo $materiel->commentaire ?></td>
+                            </tr>
                         <?php
+                        }
                         }
                     ?>
                        

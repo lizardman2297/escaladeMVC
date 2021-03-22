@@ -9,7 +9,7 @@
     <div class="container">
         Forumulaire ajout materiel
 
-        <form enctype="multipart/form-data" action="model/formulaireMaterielAjoutModel.php" method="GET" >
+        <form enctype="multipart/form-data" action="model/formulaire/materiel/ajouter.php" method="GET" >
             <!-- <div class="form-group"> -->
                 <label for="nomProduit">Nom</label>
                 <input type="text" class="form-control" id="nomProduit">

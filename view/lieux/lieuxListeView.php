@@ -26,7 +26,7 @@
         ?>
                 <tr>
                 <td class="libelle"><?php echo $lieu["libelle"] ?></td>
-                <td class="ville"><?php echo $lieu["ville"] ?></td>
+                <td class="ville"><abbr title="<?php echo $lieu["departement"] ?>"><?php echo $lieu["ville"] ?></abbr></td>
                 <td class="latitude"><?php echo $lieu["latitude"] ?></td>
                 <td class="longitude"><?php echo $lieu["longitude"] ?></td>
             </tr>                      

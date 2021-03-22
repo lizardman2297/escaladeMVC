@@ -1,0 +1,31 @@
+form {
+    display: grid;
+}
+
+label {
+    margin: 10px 0 5px 0;
+}
+
+input[type=text], select {
+    outline: none;
+}
+
+input[type=text]:focus, select:focus {
+    border-style: solid;
+    /* border-width: 1px; */
+    border-color: green;
+}
+
+input[type=submit] {
+    margin: 10px 0;
+    border-style: none;
+    border-radius: 10px;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+input[type=submit]:hover {
+    background-color: green;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}

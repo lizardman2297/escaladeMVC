@@ -8,7 +8,10 @@ function listeLieux(){
 }
 
 function ajouterLieux(){
+    require_once("model/lieuxModel.php");
+
     $title = "Ajouter lieux";
+    $departement = getAllDepartements();
 
     require_once("view/lieux/lieuxAjoutView.php");
 }
